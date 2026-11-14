@@ -168,7 +168,7 @@ function openDialog(slug) {
 
 document.getElementById('q').addEventListener('input', e => { state.q = e.target.value; renderTable(); });
 document.getElementById('category').addEventListener('change', e => { state.category = e.target.value; renderTable(); history.replaceState(null, '', '#category=' + state.category); });
-document.getElementById('chain').addEventListener('change', e => { state.chain = e.target.value; renderTable(); });
+document.getElementById('chain').addEventListener('change', e => { state.chain = e.target.value; renderTable(); history.replaceState(null, '', #chain=' + state.chain); });
 document.getElementById('watchlist-only').addEventListener('change', e => { state.watchlistOnly = e.target.checked; renderTable(); });
 document.getElementById('sort').addEventListener('change', e => { state.sort = e.target.value; renderTable(); });
 document.getElementById('board-table').querySelector('thead').addEventListener('click', (e) => { const th = e.target.closest('th[data-sort]'); if (!th || state.tab !== 'board') return; const k = th.getAttribute('data-sort'); if (state.sort === k) { state.dir = (state.dir === 1 ? -1 : 1); } else { state.sort = k; state.dir = 1; } renderTable(); });
